@@ -1,0 +1,6 @@
+framework module Pods_Pokemon_Detailer {
+  umbrella header "Pods-Pokemon Detailer-umbrella.h"
+
+  export *
+  module * { export * }
+}
