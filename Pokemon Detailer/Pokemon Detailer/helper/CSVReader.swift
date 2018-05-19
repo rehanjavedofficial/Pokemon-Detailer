@@ -12,9 +12,9 @@ import Foundation
 class CSVReader {
     
     // Reading csv file data from pokemon.csv
-    func readCSVData() -> [PokemonData] {
+    func readCSVData() -> [Pokemon] {
         
-        var pokemonData: [PokemonData] = []
+        var pokemonData: [Pokemon] = []
         
         do{ // for error...
             
@@ -32,7 +32,7 @@ class CSVReader {
                 let rowComponents = row.components(separatedBy: ",") // row components of one row.
                 
                 // adding pokemon row data in array.
-                pokemonData.append(PokemonData(id: Int(rowComponents[0])!, name: rowComponents[1], specie: Int(rowComponents[2])!, height: Int(rowComponents[3])!, weight: Int(rowComponents[4])!, baseExperience: Int(rowComponents[5])!, order: Int(rowComponents[6])!, isDefault: Int(rowComponents[7])!))
+                pokemonData.append(Pokemon(pokemonName: rowComponents[1], pokemonId: Int(rowComponents[0])!))
                 count = count + 1
                 
             }

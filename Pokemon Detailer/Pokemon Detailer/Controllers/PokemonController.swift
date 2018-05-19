@@ -12,7 +12,7 @@ class PokemonController: UIViewController, UICollectionViewDelegate, UICollectio
 
     // Attributes..
     @IBOutlet weak var collectionView: UICollectionView!
-    private var pokemonData: [PokemonData] = []
+    private var pokemonData: [Pokemon] = []
     
     // When view in complete.
     override func viewDidLoad() {
@@ -29,17 +29,17 @@ class PokemonController: UIViewController, UICollectionViewDelegate, UICollectio
     // UICollectionView methods..
     ///////////////////////////////
     
+    // number of pokemons..
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return pokemonData.count
     }
     
+    // cell in the section.
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "pokemoncell", for: indexPath) as? PokemonCell {
             
-            let pokData: PokemonData = self.pokemonData[indexPath.row]
-            cell.registerPokemon(pokemon: Pokemon(pokemonName: pokData.getName, pokemonId: pokData.getID))
-            
+            cell.registerPokemon(pokemon: self.pokemonData[indexPath.row])
             return cell
             
         }else{
@@ -48,14 +48,17 @@ class PokemonController: UIViewController, UICollectionViewDelegate, UICollectio
         
     }
     
+    // number of sections..
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
 
+    // when any cell is clicked..
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("\(self.pokemonData[indexPath.row].getCompletePokemonData())")
+        print("\(self.pokemonData[indexPath.row].getPokemonName), \(self.pokemonData[indexPath.row].getPokemonID)")
     }
     
+    // the size of each pokemon cell.
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 115, height: 130)
     }
