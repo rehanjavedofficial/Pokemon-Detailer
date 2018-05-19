@@ -9,8 +9,10 @@
 import UIKit
 
 class PokemonController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
+
+    // Attributes..
     @IBOutlet weak var collectionView: UICollectionView!
+    private var pokemonData: [PokemonData] = []
     
     // When view in complete.
     override func viewDidLoad() {
@@ -18,18 +20,26 @@ class PokemonController: UIViewController, UICollectionViewDelegate, UICollectio
         
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-
+        
+        self.pokemonData = CSVReader().readCSVData() // reading the data from csv file..
+        
     }
 
+    ////////////////////////////////
+    // UICollectionView methods..
+    ///////////////////////////////
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return pokemonData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "pokemoncell", for: indexPath) as? PokemonCell {
             
-            cell.registerPokemon(pokemon: Pokemon(pokemonName: "Pokemon", pokemonId: indexPath.row+1))
+            let pokData: PokemonData = self.pokemonData[indexPath.row]
+            cell.registerPokemon(pokemon: Pokemon(pokemonName: pokData.getName, pokemonId: pokData.getID))
+            
             return cell
             
         }else{
@@ -43,7 +53,7 @@ class PokemonController: UIViewController, UICollectionViewDelegate, UICollectio
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        print("\(self.pokemonData[indexPath.row].getCompletePokemonData())")
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

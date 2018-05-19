@@ -6,8 +6,9 @@
 //  Copyright © 2018 RJ APPS. All rights reserved.
 //
 
+// Pokemon class only for UICollectionViewCell usage..
 class Pokemon {
-    
+
     // Attributes
     private var _pokemonName : String
     private var _pokemonId : Int
