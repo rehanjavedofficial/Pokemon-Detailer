@@ -9,22 +9,26 @@
 /* Begin PBXBuildFile section */
 		4887DF8E99AB720D275DF2C1 /* Pods_Pokemon_Detailer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A871D291D2F820D9D53E3ED8 /* Pods_Pokemon_Detailer.framework */; };
 		830BCDF720ACA84F003FA1DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830BCDF620ACA84F003FA1DD /* AppDelegate.swift */; };
-		830BCDF920ACA84F003FA1DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830BCDF820ACA84F003FA1DD /* ViewController.swift */; };
+		830BCDF920ACA84F003FA1DD /* PokemonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830BCDF820ACA84F003FA1DD /* PokemonController.swift */; };
 		830BCDFC20ACA84F003FA1DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 830BCDFA20ACA84F003FA1DD /* Main.storyboard */; };
 		830BCDFE20ACA850003FA1DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 830BCDFD20ACA850003FA1DD /* Assets.xcassets */; };
 		830BCE0120ACA850003FA1DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 830BCDFF20ACA850003FA1DD /* LaunchScreen.storyboard */; };
 		830BCE0920ACB15D003FA1DD /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 830BCE0820ACB15D003FA1DD /* pokemon.csv */; };
+		834E0EC820AD7D9F0002D4C0 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E0EC720AD7D9F0002D4C0 /* Pokemon.swift */; };
+		834E0ECA20AD849D0002D4C0 /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E0EC920AD849D0002D4C0 /* PokemonCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		830BCDF320ACA84F003FA1DD /* Pokemon Detailer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pokemon Detailer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		830BCDF620ACA84F003FA1DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		830BCDF820ACA84F003FA1DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		830BCDF820ACA84F003FA1DD /* PokemonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonController.swift; sourceTree = "<group>"; };
 		830BCDFB20ACA84F003FA1DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		830BCDFD20ACA850003FA1DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		830BCE0020ACA850003FA1DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		830BCE0220ACA850003FA1DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		830BCE0820ACB15D003FA1DD /* pokemon.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
+		834E0EC720AD7D9F0002D4C0 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		834E0EC920AD849D0002D4C0 /* PokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
 		A871D291D2F820D9D53E3ED8 /* Pods_Pokemon_Detailer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pokemon_Detailer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB098A7170BDA51A0C9BD0B /* Pods-Pokemon Detailer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokemon Detailer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pokemon Detailer/Pods-Pokemon Detailer.release.xcconfig"; sourceTree = "<group>"; };
 		B7DEB3D2BA6FB29A69C14831 /* Pods-Pokemon Detailer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokemon Detailer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pokemon Detailer/Pods-Pokemon Detailer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -80,8 +84,10 @@
 		830BCDF520ACA84F003FA1DD /* Pokemon Detailer */ = {
 			isa = PBXGroup;
 			children = (
+				834E0EC620AD7D8E0002D4C0 /* Models */,
+				834E0EC520AD7D880002D4C0 /* Views */,
+				834E0EC420AD7D680002D4C0 /* Controllers */,
 				830BCDF620ACA84F003FA1DD /* AppDelegate.swift */,
-				830BCDF820ACA84F003FA1DD /* ViewController.swift */,
 				830BCDFA20ACA84F003FA1DD /* Main.storyboard */,
 				830BCDFD20ACA850003FA1DD /* Assets.xcassets */,
 				830BCDFF20ACA850003FA1DD /* LaunchScreen.storyboard */,
@@ -89,6 +95,30 @@
 				830BCE0820ACB15D003FA1DD /* pokemon.csv */,
 			);
 			path = "Pokemon Detailer";
+			sourceTree = "<group>";
+		};
+		834E0EC420AD7D680002D4C0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				830BCDF820ACA84F003FA1DD /* PokemonController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		834E0EC520AD7D880002D4C0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				834E0EC920AD849D0002D4C0 /* PokemonCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		834E0EC620AD7D8E0002D4C0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				834E0EC720AD7D9F0002D4C0 /* Pokemon.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,8 +234,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				830BCDF920ACA84F003FA1DD /* ViewController.swift in Sources */,
+				830BCDF920ACA84F003FA1DD /* PokemonController.swift in Sources */,
+				834E0ECA20AD849D0002D4C0 /* PokemonCell.swift in Sources */,
 				830BCDF720ACA84F003FA1DD /* AppDelegate.swift in Sources */,
+				834E0EC820AD7D9F0002D4C0 /* Pokemon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
