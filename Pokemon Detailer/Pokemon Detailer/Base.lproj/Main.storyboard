@@ -29,12 +29,16 @@
                                     <constraint firstAttribute="height" constant="60" id="T8k-8u-3Lk"/>
                                 </constraints>
                             </view>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ATY-gY-2cp">
+                            <searchBar contentMode="redraw" placeholder="Search Pokemon" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ATY-gY-2cp">
                                 <rect key="frame" x="0.0" y="60" width="375" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="TzL-8i-aZk"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
                             </searchBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="qUA-kK-9Ic">
                                 <rect key="frame" x="0.0" y="105" width="375" height="562"/>
@@ -70,7 +74,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="XGh-Uo-uaL"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -128,6 +132,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Ner-vg-pUs" id="dyy-Gt-dF8"/>
+                        <outlet property="searchBar" destination="ATY-gY-2cp" id="4fQ-4N-QeX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
